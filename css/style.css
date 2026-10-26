@@ -1,0 +1,123 @@
+:root{
+  --paper:#faf6f1;--paper-deep:#f1ded0;--ink:#212121;--ink-muted:#6b6259;--line:#8a847c;
+  --gold:#c89854;--gold-deep:#8c6428;--gold-light:#ead9bc;
+  --sans:"Noto Sans TC","PingFang TC",system-ui,sans-serif;--display:"Cinzel","Noto Serif TC",serif;
+  --gutter:24px;--block:40px;--safe:72px;--section:120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.75;font-weight:500}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3,p,ul,ol{margin:0;padding:0}
+a{color:inherit}
+.container{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* header */
+.site-header{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--line)}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:56px;height:56px}
+.brand-text{display:flex;flex-direction:column;line-height:1.2}
+.brand-name{font-family:var(--display);font-weight:600;font-size:18px;letter-spacing:.14em}
+.brand-sub{font-size:13px;letter-spacing:.2em;color:var(--ink-muted)}
+.nav{display:flex;gap:24px;list-style:none;font-size:15px}
+.nav a{text-decoration:none;color:var(--ink-muted)}
+.nav a:hover{color:var(--gold-deep)}
+
+/* common */
+.pill{display:inline-block;border-radius:999px;padding:4px 16px;background:var(--gold-light);font-size:14px;font-weight:700;letter-spacing:.12em}
+.en{font-family:var(--display);font-weight:600;letter-spacing:.1em;color:var(--gold-deep)}
+.num{font-family:var(--display);font-weight:600}
+.muted{color:var(--ink-muted)}
+.dots{list-style:none}
+.dots li{position:relative;padding-left:22px}
+.dots li::before{content:"";position:absolute;left:2px;top:.72em;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.art{fill:none;stroke:var(--ink);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.art .g{stroke:var(--gold)}.art .gf{fill:var(--gold);stroke:none}.art .df{fill:var(--paper)}
+
+/* hero */
+.hero{padding:var(--section) 0 96px;border-bottom:1px solid var(--line)}
+.hero .pill{margin-bottom:24px}
+.hero-title{width:388px;margin-bottom:24px}
+.hero p{max-width:520px}
+
+/* note section */
+.note-section{padding:var(--section) 0;border-bottom:1px solid var(--line)}
+.note-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px}
+.note-head .en{font-size:28px}
+.note-title{margin-bottom:16px}
+.lead{font-size:19px;margin-bottom:56px}
+
+/* reasons intro */
+.reasons{display:flex;align-items:center;gap:48px;background:var(--paper-deep);padding:40px 56px;margin-bottom:var(--block)}
+.reasons .big{font-size:180px;line-height:1;color:var(--gold)}
+
+/* cause cards */
+.causes{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--block) 28px}
+.card-art{position:relative;background:var(--paper-deep);aspect-ratio:4/3;margin-bottom:16px}
+.card-art svg{position:absolute;inset:12% 10% 10% 18%;width:72%;height:78%}
+.flag{position:absolute;left:0;top:0;width:56px;height:64px;background:var(--gold);color:var(--ink);display:flex;justify-content:center;padding-top:6px;clip-path:polygon(0 0,100% 0,100% 100%,50% 85%,0 100%)}
+.flag .num{font-size:30px;line-height:40px}
+.cause h3{margin-bottom:8px}
+.cause h3 img{height:60px;width:auto}
+
+.bubble{display:inline-block;border:1.5px solid var(--ink);border-radius:12px;padding:12px 20px;background:var(--paper);position:relative;margin-top:var(--block)}
+.bubble::after{content:"";position:absolute;left:36px;bottom:-11px;width:18px;height:18px;background:var(--paper);border-right:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);transform:rotate(45deg)}
+.bubble img{height:48px;width:auto}
+
+.which{margin-top:96px}
+.which h3 img{height:60px;width:auto;margin-bottom:16px}
+
+/* skin structure */
+.structure{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:var(--block);align-items:start;margin-bottom:96px}
+.sub-title{margin-bottom:24px}
+.sub-title img{height:48px;width:auto}
+.stack{border:1.5px solid var(--ink)}
+.stack div{padding:10px 20px;border-bottom:1px solid var(--line)}
+.stack div:last-child{border-bottom:0}
+.stack .key{background:var(--gold-light);font-weight:700}
+.stack .dermis{background:var(--paper-deep);padding:24px 20px}
+.stack .hypo{background:#e8d2c2;padding:24px 20px}
+.structure-note dt{font-weight:700;color:var(--gold-deep);letter-spacing:.12em;font-size:15px}
+.structure-note dd{margin:4px 0 24px}
+
+.layers{display:grid;gap:16px;margin-bottom:96px;list-style:none}
+.layers li{display:grid;grid-template-columns:80px 1fr;align-items:center;border:1.5px solid var(--line);padding:16px 24px}
+.layers li.key{border-color:var(--gold);background:var(--paper-deep)}
+.layers .num{font-size:36px;color:var(--gold-deep)}
+.layers img{height:44px;width:auto}
+
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:var(--block);align-items:center;margin-bottom:96px}
+.feature .card-art{margin:0}
+.feature .card-art svg{inset:12% 12% 10% 18%}
+.feature h3 img{height:60px;width:auto;margin-bottom:8px}
+.feature .sub img{height:40px;width:auto;margin-bottom:16px}
+
+.remember h3 img{height:60px;width:auto;margin-bottom:24px}
+.remember .pair{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.remember .pair div{border:1.5px solid var(--gold);background:var(--paper-deep);padding:28px}
+.remember .pair .num{font-size:36px;color:var(--gold-deep);display:block}
+.remember .pair img{height:44px;width:auto;margin:8px 0}
+
+.next{margin-top:56px}
+.next .label{font-weight:700;letter-spacing:.12em;color:var(--gold-deep);margin-right:12px}
+
+.site-footer{padding:48px 0;color:var(--ink-muted);font-size:14px}
+.site-footer .container{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:24px}
+.site-footer a{text-decoration:none}
+.site-footer a:hover{color:var(--gold-deep)}
+
+@media (max-width:768px){
+  :root{--section:72px}
+  body{font-size:16px}
+  .nav{display:none}
+  .hero{padding:72px 0 56px}
+  .hero-title{width:260px}
+  .note-title{width:280px}
+  .reasons{gap:24px;padding:24px}
+  .reasons .big{font-size:110px}
+  .causes{grid-template-columns:1fr}
+  .structure,.feature,.remember .pair{grid-template-columns:1fr}
+  .feature{gap:20px}
+  .bubble img{height:32px}
+}
